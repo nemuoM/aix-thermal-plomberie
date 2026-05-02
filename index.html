@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aix Thermal Plomberie — Chauffage & Sanitaire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  :root{--bleu:#1A3A5C;--bleu-clair:#2E6FA8;--gris:#F4F6F8;--blanc:#fff;--text:#1F2937;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;background:var(--gris);color:var(--text);line-height:1.6;}
+  header{background:var(--bleu);color:var(--blanc);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+  .logo{font-weight:700;font-size:1.3rem;letter-spacing:-0.5px;}
+  nav a{color:var(--blanc);text-decoration:none;margin-left:1.5rem;font-weight:500;font-size:.9rem;}
+  .hero{background:var(--bleu);color:var(--blanc);padding:5rem 2rem;text-align:center;}
+  .hero h1{font-size:2.8rem;font-weight:700;margin-bottom:1rem;}
+  .hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 2rem;}
+  .btn{background:var(--bleu-clair);color:var(--blanc);padding:.9rem 2rem;border-radius:6px;text-decoration:none;font-weight:600;display:inline-block;}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:1100px;margin:-3rem auto 0;padding:0 2rem;position:relative;z-index:2;}
+  .feature{background:var(--blanc);padding:2rem;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.06);text-align:center;}
+  .feature-icon{font-size:2.5rem;margin-bottom:1rem;}
+  .feature h3{font-weight:600;margin-bottom:.5rem;color:var(--bleu);}
+  section{padding:4rem 2rem;max-width:1100px;margin:0 auto;}
+  .section-title{text-align:center;font-size:1.8rem;font-weight:700;color:var(--bleu);margin-bottom:2rem;}
+  .services-list{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .service-item{background:var(--blanc);padding:1.5rem;border-radius:10px;border-left:4px solid var(--bleu-clair);}
+  .service-item h4{font-weight:600;margin-bottom:.3rem;color:var(--bleu);}
+  .zone{background:var(--bleu);color:var(--blanc);padding:3rem 2rem;text-align:center;border-radius:16px;margin-top:2rem;}
+  .zone h3{font-size:1.5rem;margin-bottom:1rem;}
+  footer{background:var(--bleu);color:var(--blanc);text-align:center;padding:2rem;font-size:.85rem;}
+  @media(max-width:768px){.hero h1{font-size:2rem;}.services-list{grid-template-columns:1fr;}nav a{margin-left:1rem;}}
+</style>
+</head>
+<body>
+<header><div class="logo">Aix Thermal Plomberie</div><nav><a href="#services">Services</a><a href="#zone">Zone</a><a href="#contact">Contact</a></nav></header>
+<section class="hero">
+  <h1>Plomberie & Chauffage à Aix</h1>
+  <p>Intervention rapide, devis gratuit et travail soigné. Votre confort est notre métier.</p>
+  <a href="tel:0442567890" class="btn">Appeler maintenant</a>
+</section>
+<div class="features">
+  <div class="feature"><div class="feature-icon">⚡</div><h3>Intervention 24/7</h3><p>Urgence plomberie ? Nous sommes disponibles jour et nuit.</p></div>
+  <div class="feature"><div class="feature-icon">📋</div><h3>Devis gratuit</h3><p>Transparence totale. Aucune surprise sur la facture.</p></div>
+  <div class="feature"><div class="feature-icon">🛡️</div><h3>Garantie 2 ans</h3><p>Toutes nos installations sont garanties pièces et main-d'œuvre.</p></div>
+  <div class="feature"><div class="feature-icon">🏠</div><h3>Aix & alentours</h3><p>Intervention sur Aix-en-Provence et dans un rayon de 30 km.</p></div>
+</div>
+<section id="services">
+  <h2 class="section-title">Nos prestations</h2>
+  <div class="services-list">
+    <div class="service-item"><h4>Dépannage plomberie</h4><p>Fuite d'eau, robinetterie, wc bouchés, changement de joint.</p></div>
+    <div class="service-item"><h4>Installation chauffage</h4><p>Chaudière gaz, pompe à chaleur, radiateurs, plancher chauffant.</p></div>
+    <div class="service-item"><h4>Installation sanitaire</h4><p>Salle de bain complète, douche à l'italienne, vasque sur mesure.</p></div>
+    <div class="service-item"><h4>Adoucisseur & Filtration</h4><p>Traitement de l'eau, adoucisseurs, filtres à eau potable.</p></div>
+  </div>
+</section>
+<section id="zone">
+  <div class="zone">
+    <h3>Zone d'intervention</h3>
+    <p>Aix-en-Provence, Les Milles, Luynes, Peyrolles, Lambesc, Saint-Cannat et villages aux alentours.</p>
+  </div>
+</section>
+<section id="contact" style="text-align:center;">
+  <h2 class="section-title">Contactez-nous</h2>
+  <p style="margin-bottom:1rem;"><strong>Aix Thermal Plomberie</strong><br>32 Boulevard de la République<br>13100 Aix-en-Provence</p>
+  <p style="margin-bottom:1rem;">📞 04 42 56 78 90<br>✉️ contact@aixthermal.fr</p>
+  <p style="font-size:.9rem;color:#6B7280;">Du lundi au vendredi — 8h à 18h<br>Samedi — 9h à 12h</p>
+</section>
+<footer>© Aix Thermal Plomberie — SIRET 123 456 789 00010</footer>
+</body>
+</html>

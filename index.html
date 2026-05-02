@@ -3,68 +3,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aix Thermal Plomberie — Chauffage & Sanitaire</title>
+<title>Aix Thermal Plomberie | Dépannage & Installation Aix-en-Provence</title>
+<meta name="description" content="Plombier chauffagiste à Aix-en-Provence. Dépannage 24/7, installation chauffage, salle de bain. Devis gratuit. 32 Bd de la République.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-  :root{--bleu:#1A3A5C;--bleu-clair:#2E6FA8;--gris:#F4F6F8;--blanc:#fff;--text:#1F2937;}
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Inter',sans-serif;background:var(--gris);color:var(--text);line-height:1.6;}
-  header{background:var(--bleu);color:var(--blanc);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
-  .logo{font-weight:700;font-size:1.3rem;letter-spacing:-0.5px;}
-  nav a{color:var(--blanc);text-decoration:none;margin-left:1.5rem;font-weight:500;font-size:.9rem;}
-  .hero{background:var(--bleu);color:var(--blanc);padding:5rem 2rem;text-align:center;}
-  .hero h1{font-size:2.8rem;font-weight:700;margin-bottom:1rem;}
-  .hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 2rem;}
-  .btn{background:var(--bleu-clair);color:var(--blanc);padding:.9rem 2rem;border-radius:6px;text-decoration:none;font-weight:600;display:inline-block;}
-  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:1100px;margin:-3rem auto 0;padding:0 2rem;position:relative;z-index:2;}
-  .feature{background:var(--blanc);padding:2rem;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.06);text-align:center;}
-  .feature-icon{font-size:2.5rem;margin-bottom:1rem;}
-  .feature h3{font-weight:600;margin-bottom:.5rem;color:var(--bleu);}
-  section{padding:4rem 2rem;max-width:1100px;margin:0 auto;}
-  .section-title{text-align:center;font-size:1.8rem;font-weight:700;color:var(--bleu);margin-bottom:2rem;}
-  .services-list{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-  .service-item{background:var(--blanc);padding:1.5rem;border-radius:10px;border-left:4px solid var(--bleu-clair);}
-  .service-item h4{font-weight:600;margin-bottom:.3rem;color:var(--bleu);}
-  .zone{background:var(--bleu);color:var(--blanc);padding:3rem 2rem;text-align:center;border-radius:16px;margin-top:2rem;}
-  .zone h3{font-size:1.5rem;margin-bottom:1rem;}
-  footer{background:var(--bleu);color:var(--blanc);text-align:center;padding:2rem;font-size:.85rem;}
-  @media(max-width:768px){.hero h1{font-size:2rem;}.services-list{grid-template-columns:1fr;}nav a{margin-left:1rem;}}
+:root{--acier:#0F1B2E;--acier-mid:#1C2E4A;--bleu:#2563EB;--gris:#E2E8F0;--blanc:#F8FAFC;--alert:#DC2626;--ok:#059669;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--blanc);color:var(--acier);line-height:1.6;font-size:16px}
+img{max-width:100%;display:block;height:auto}
+
+/* Noise texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* Header */
+.topbar{background:var(--acier);color:var(--blanc);padding:.6rem 4vw;font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.05em;border-bottom:1px solid var(--acier-mid)}
+.topbar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(248,250,252,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gris);padding:0 4vw}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px}
+.nav-logo{font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.nav-logo span{color:var(--bleu)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{color:var(--acier);text-decoration:none;font-weight:500;font-size:.9rem;position:relative;padding:.25rem 0}
+.nav-links a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--bleu);transition:width .25s ease}
+.nav-links a:hover::after{width:100%}
+
+/* Hero */
+.hero{background:var(--acier);color:var(--blanc);padding:8rem 4vw 6rem}
+.hero-inner{max-width:1200px;margin:0 auto}
+.hero-badge{display:inline-block;background:var(--alert);color:var(--blanc);font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;padding:.35rem .8rem;margin-bottom:1.5rem;border-radius:2px}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.5rem;max-width:800px}
+.hero h1 span{color:var(--bleu)}
+.hero-desc{font-size:1.1rem;opacity:.8;max-width:540px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--bleu);color:var(--blanc);padding:1rem 2rem;font-weight:600;text-decoration:none;border-radius:4px;transition:background .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:#1d4ed8}
+.btn-secondary{background:transparent;color:var(--blanc);padding:1rem 2rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:4px;transition:all .2s}
+.btn-secondary:hover{border-color:var(--blanc)}
+
+/* Features */
+.features{background:var(--gris);padding:4rem 4vw}
+.features-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.feature{text-align:center;padding:1.5rem}
+.feature-icon{width:56px;height:56px;background:var(--blanc);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem;border:1px solid #CBD5E1}
+.feature h3{font-weight:600;font-size:1rem;margin-bottom:.5rem}
+.feature p{font-size:.85rem;opacity:.7}
+
+/* Services */
+.section{padding:5rem 4vw}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;border-bottom:2px solid var(--acier);padding-bottom:1rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-.02em}
+.section-num{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--bleu);background:var(--gris);padding:.3rem .7rem;border-radius:2px}
+
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.service{background:var(--blanc);border:1px solid var(--gris);padding:2rem;border-radius:6px;transition:all .2s}
+.service:hover{border-color:var(--bleu);box-shadow:0 4px 20px rgba(37,99,235,.08)}
+.service-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+.service h3{font-weight:600;font-size:1.1rem}
+.service-tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;background:var(--gris);padding:.2rem .5rem;border-radius:2px}
+.service p{font-size:.9rem;opacity:.75}
+
+/* Zone */
+.zone{background:var(--acier-mid);color:var(--blanc);padding:4rem 4vw;text-align:center}
+.zone-inner{max-width:700px;margin:0 auto}
+.zone h2{font-size:1.8rem;font-weight:700;margin-bottom:1rem}
+.zone p{opacity:.8}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact-info{display:grid;gap:1.5rem}
+.contact-block{padding:1.5rem;background:var(--gris);border-radius:6px;border-left:4px solid var(--bleu)}
+.contact-block strong{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--bleu);margin-bottom:.3rem}
+.contact-block a{color:var(--acier);text-decoration:none;font-weight:500}
+.contact-block a:hover{text-decoration:underline}
+.contact-visual{aspect-ratio:1;background:linear-gradient(135deg,var(--acier),var(--acier-mid));border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-family:'JetBrains Mono',monospace;font-size:.8rem}
+
+/* Footer */
+.footer{background:var(--acier);color:rgba(255,255,255,.5);padding:2rem 4vw;text-align:center;font-size:.8rem;font-family:'JetBrains Mono',monospace}
+
+@media(max-width:768px){
+  .features-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column}
+  .nav-links{gap:1rem}
+}
 </style>
 </head>
 <body>
-<header><div class="logo">Aix Thermal Plomberie</div><nav><a href="#services">Services</a><a href="#zone">Zone</a><a href="#contact">Contact</a></nav></header>
-<section class="hero">
-  <h1>Plomberie & Chauffage à Aix</h1>
-  <p>Intervention rapide, devis gratuit et travail soigné. Votre confort est notre métier.</p>
-  <a href="tel:0442567890" class="btn">Appeler maintenant</a>
-</section>
-<div class="features">
-  <div class="feature"><div class="feature-icon">⚡</div><h3>Intervention 24/7</h3><p>Urgence plomberie ? Nous sommes disponibles jour et nuit.</p></div>
-  <div class="feature"><div class="feature-icon">📋</div><h3>Devis gratuit</h3><p>Transparence totale. Aucune surprise sur la facture.</p></div>
-  <div class="feature"><div class="feature-icon">🛡️</div><h3>Garantie 2 ans</h3><p>Toutes nos installations sont garanties pièces et main-d'œuvre.</p></div>
-  <div class="feature"><div class="feature-icon">🏠</div><h3>Aix & alentours</h3><p>Intervention sur Aix-en-Provence et dans un rayon de 30 km.</p></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>DISPONIBLE 24H/24 — 7J/7</span>
+    <span>AIX-EN-PROVENCE & 30KM AUX ALENTOURS</span>
+  </div>
 </div>
-<section id="services">
-  <h2 class="section-title">Nos prestations</h2>
-  <div class="services-list">
-    <div class="service-item"><h4>Dépannage plomberie</h4><p>Fuite d'eau, robinetterie, wc bouchés, changement de joint.</p></div>
-    <div class="service-item"><h4>Installation chauffage</h4><p>Chaudière gaz, pompe à chaleur, radiateurs, plancher chauffant.</p></div>
-    <div class="service-item"><h4>Installation sanitaire</h4><p>Salle de bain complète, douche à l'italienne, vasque sur mesure.</p></div>
-    <div class="service-item"><h4>Adoucisseur & Filtration</h4><p>Traitement de l'eau, adoucisseurs, filtres à eau potable.</p></div>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <div class="nav-logo">Aix Thermal <span>Plomberie</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#zone">Zone</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <div class="hero-inner">
+    <span class="hero-badge">Intervention sous 1h</span>
+    <h1>Plomberie & <span>Chauffage</span> à Aix</h1>
+    <p class="hero-desc">Intervention rapide, devis gratuit et travail soigné. Votre confort est notre métier depuis 2008.</p>
+    <div class="hero-actions">
+      <a href="tel:0442567890" class="btn-primary">Appeler maintenant →</a>
+      <a href="#services" class="btn-secondary">Nos prestations</a>
+    </div>
+  </div>
+</header>
+
+<section class="features">
+  <div class="features-inner">
+    <div class="feature">
+      <div class="feature-icon" aria-hidden="true">⚡</div>
+      <h3>Intervention 24/7</h3>
+      <p>Urgence plomberie ? Disponibles jour et nuit.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-hidden="true">📋</div>
+      <h3>Devis gratuit</h3>
+      <p>Transparence totale. Aucune surprise.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-hidden="true">🛡️</div>
+      <h3>Garantie 2 ans</h3>
+      <p>Pièces et main-d'œuvre comprises.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-hidden="true">🏠</div>
+      <h3>Aix & alentours</h3>
+      <p>Intervention dans un rayon de 30 km.</p>
+    </div>
   </div>
 </section>
-<section id="zone">
-  <div class="zone">
-    <h3>Zone d'intervention</h3>
+
+<main>
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Nos prestations</h2>
+      <span class="section-num">04 SERVICES</span>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-header">
+          <h3>Dépannage plomberie</h3>
+          <span class="service-tag">Urgent</span>
+        </div>
+        <p>Fuite d'eau, robinetterie, wc bouchés, changement de joint. Intervention rapide et propre.</p>
+      </article>
+      <article class="service">
+        <div class="service-header">
+          <h3>Installation chauffage</h3>
+          <span class="service-tag">Neuf</span>
+        </div>
+        <p>Chaudière gaz, pompe à chaleur, radiateurs, plancher chauffant. Installation certifiée.</p>
+      </article>
+      <article class="service">
+        <div class="service-header">
+          <h3>Installation sanitaire</h3>
+          <span class="service-tag">Rénovation</span>
+        </div>
+        <p>Salle de bain complète, douche à l'italienne, vasque sur mesure. Du rêve à la réalité.</p>
+      </article>
+      <article class="service">
+        <div class="service-header">
+          <h3>Adoucisseur & Filtration</h3>
+          <span class="service-tag">Confort</span>
+        </div>
+        <p>Traitement de l'eau, adoucisseurs, filtres à eau potable. Eau de qualité au robinet.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="zone-inner">
+    <h2>Zone d'intervention</h2>
     <p>Aix-en-Provence, Les Milles, Luynes, Peyrolles, Lambesc, Saint-Cannat et villages aux alentours.</p>
   </div>
 </section>
-<section id="contact" style="text-align:center;">
-  <h2 class="section-title">Contactez-nous</h2>
-  <p style="margin-bottom:1rem;"><strong>Aix Thermal Plomberie</strong><br>32 Boulevard de la République<br>13100 Aix-en-Provence</p>
-  <p style="margin-bottom:1rem;">📞 04 42 56 78 90<br>✉️ contact@aixthermal.fr</p>
-  <p style="font-size:.9rem;color:#6B7280;">Du lundi au vendredi — 8h à 18h<br>Samedi — 9h à 12h</p>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Contactez-nous</h2>
+      <span class="section-num">COORDONNÉES</span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <strong>Adresse</strong>
+          32 Boulevard de la République<br>13100 Aix-en-Provence
+        </div>
+        <div class="contact-block">
+          <strong>Téléphone</strong>
+          <a href="tel:0442567890">04 42 56 78 90</a>
+        </div>
+        <div class="contact-block">
+          <strong>Email</strong>
+          <a href="mailto:contact@aixthermal.fr">contact@aixthermal.fr</a>
+        </div>
+        <div class="contact-block">
+          <strong>Horaires</strong>
+          Lun–Ven : 8h – 18h · Sam : 9h – 12h
+        </div>
+      </div>
+      <div class="contact-visual" role="img" aria-label="Plan d'intervention Aix">PLAN · AIX-EN-PROVENCE</div>
+    </div>
+  </div>
 </section>
-<footer>© Aix Thermal Plomberie — SIRET 123 456 789 00010</footer>
+</main>
+
+<footer class="footer">
+  © Aix Thermal Plomberie — SIRET 123 456 789 00010 — Aix-en-Provence
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Plumber",
+  "name":"Aix Thermal Plomberie",
+  "address":{"@type":"PostalAddress","streetAddress":"32 Boulevard de la République","addressLocality":"Aix-en-Provence","postalCode":"13100","addressCountry":"FR"},
+  "telephone":"+33442567890",
+  "email":"contact@aixthermal.fr",
+  "openingHours":["Mo-Fr 08:00-18:00","Sa 09:00-12:00"],
+  "priceRange":"€€"
+}
+</script>
 </body>
 </html>
